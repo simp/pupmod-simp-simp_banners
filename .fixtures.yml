@@ -1,0 +1,9 @@
+---
+fixtures:
+  repositories:
+    simplib:
+      repo: https://github.com/simp/pupmod-simp-simplib
+    stdlib:
+      repo: https://github.com/simp/puppetlabs-stdlib
+  symlinks:
+    simp_banners: "#{source_dir}"

@@ -1,0 +1,57 @@
+{
+  "name": "simp-simp_banners",
+  "version": "0.1.0",
+  "author": "simp",
+  "summary": "Common banners collected for use in puppet modules",
+  "license": "Apache-2.0",
+  "source": "https://github.com/simp/pupmod-simp-simp_banners",
+  "project_page": "https://github.com/simp/pupmod-simp-simp_banners",
+  "issues_url": "https://simp-project.atlassian.net",
+  "tags": [
+    "simp"
+  ],
+  "dependencies": [
+    {
+      "name": "simp/iptables",
+      "version_requirement": ">= 6.0.1 < 7.0.0"
+    },
+    {
+      "name": "simp/simplib",
+      "version_requirement": ">= 3.3.1 < 4.0.0"
+    },
+    {
+      "name": "puppetlabs/stdlib",
+      "version_requirement": ">= 4.13.1 < 5.0.0"
+    }
+  ],
+  "operatingsystem_support": [
+    {
+      "operatingsystem": "CentOS",
+      "operatingsystemrelease": [
+        "6",
+        "7"
+      ]
+    },
+    {
+      "operatingsystem": "RedHat",
+      "operatingsystemrelease": [
+        "6",
+        "7"
+      ]
+    },
+    {
+      "operatingsystem": "OracleLinux",
+      "operatingsystemrelease": [
+        "6",
+        "7"
+      ]
+    }
+  ],
+  "requirements": [
+    {
+      "name": "puppet",
+      "version_requirement": ">= 4.6.0 < 6.0.0"
+    }
+  ],
+  "data_provider": "hiera"
+}
