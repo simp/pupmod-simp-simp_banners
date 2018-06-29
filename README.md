@@ -15,7 +15,6 @@
 * [Usage](#usage)
 * [Limitations](#limitations)
 * [Development](#development)
-  * [Acceptance tests](#acceptance-tests)
 
 <!-- vim-markdown-toc -->
 
