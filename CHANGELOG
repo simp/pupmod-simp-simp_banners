@@ -1,2 +1,6 @@
+* Thu Mar 07 2019 Liz Nemsick <lnemsick.simp@gmail.com> - 0.1.1
+- Update the upper bound of stdlib to < 6.0.0
+- Update a URL in the README.md
+
 * Wed Jun 27 2018 Trevor Vaughan <tvaughan@onyxpoint.com> - 0.1.0
 - First release

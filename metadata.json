@@ -1,6 +1,6 @@
 {
   "name": "simp-simp_banners",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "author": "simp",
   "summary": "Common banners collected for use in puppet modules",
   "license": "Apache-2.0",
@@ -13,7 +13,7 @@
   "dependencies": [
     {
       "name": "puppetlabs/stdlib",
-      "version_requirement": ">= 4.13.1 < 5.0.0"
+      "version_requirement": ">= 4.13.1 < 6.0.0"
     }
   ],
   "operatingsystem_support": [
