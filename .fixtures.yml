@@ -1,7 +1,6 @@
 ---
 fixtures:
   repositories:
-    stdlib:
-      repo: https://github.com/simp/puppetlabs-stdlib
+    stdlib: https://github.com/simp/puppetlabs-stdlib
   symlinks:
     simp_banners: "#{source_dir}"
