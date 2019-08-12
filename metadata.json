@@ -1,6 +1,6 @@
 {
   "name": "simp-simp_banners",
-  "version": "0.1.3",
+  "version": "0.2.0",
   "author": "simp",
   "summary": "Common banners collected for use in puppet modules",
   "license": "Apache-2.0",
@@ -42,7 +42,7 @@
   "requirements": [
     {
       "name": "puppet",
-      "version_requirement": ">= 4.6.0 < 7.0.0"
+      "version_requirement": ">= 5.0.0 < 7.0.0"
     }
   ]
 }
