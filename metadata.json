@@ -16,29 +16,6 @@
       "version_requirement": ">= 4.13.1 < 7.0.0"
     }
   ],
-  "operatingsystem_support": [
-    {
-      "operatingsystem": "CentOS",
-      "operatingsystemrelease": [
-        "6",
-        "7"
-      ]
-    },
-    {
-      "operatingsystem": "RedHat",
-      "operatingsystemrelease": [
-        "6",
-        "7"
-      ]
-    },
-    {
-      "operatingsystem": "OracleLinux",
-      "operatingsystemrelease": [
-        "6",
-        "7"
-      ]
-    }
-  ],
   "requirements": [
     {
       "name": "puppet",
