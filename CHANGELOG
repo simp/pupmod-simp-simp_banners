@@ -1,3 +1,7 @@
+* Tue Jan 28 2020 Trevor Vaughan <tvaughan@onyxpoint.com> - 0.2.0
+- Remove all OS support statements from metadata.json since this is simply a
+  data-only module
+
 * Fri Aug 02 2019 Robert Vincent <pillarsdotnet@gmail.com> - 0.2.0
 - Drop Puppet 4 support
 - Add Puppet 6 support
