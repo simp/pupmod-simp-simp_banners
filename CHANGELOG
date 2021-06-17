@@ -1,3 +1,7 @@
+* Wed Jun 16 2021 Chris Tessmer <chris.tessmer@onyxpoint.com> - 0.3.0
+- Removed support for Puppet 5
+- Ensured support for Puppet 7 in requirements and stdlib
+
 * Tue Jan 28 2020 Trevor Vaughan <tvaughan@onyxpoint.com> - 0.2.0
 - Remove all OS support statements from metadata.json since this is simply a
   data-only module
