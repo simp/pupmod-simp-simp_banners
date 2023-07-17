@@ -129,6 +129,7 @@ jobs:
       - run: 'command -v rpm || if command -v apt-get; then sudo apt-get update; sudo apt-get install -y rpm; fi ||:'
       - run: 'bundle exec rake spec'
         continue-on-error: ${{matrix.puppet.experimental}}
+        fail-fast: false
 
 #  dump_contexts:
 #    name: 'Examine Context contents'
