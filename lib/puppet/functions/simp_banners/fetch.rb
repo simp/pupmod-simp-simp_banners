@@ -2,7 +2,6 @@
 # options
 #
 Puppet::Functions.create_function(:'simp_banners::fetch') do
-
   # @param name
   #   The banner to fetch
   #
@@ -34,7 +33,7 @@ Puppet::Functions.create_function(:'simp_banners::fetch') do
       }]', :format
   end
 
-  def fetch(name, format={})
+  def fetch(name, format = {})
     format_defaults = {
       'cr_escape'   => false,
       'file_source' => false
@@ -60,18 +59,16 @@ Puppet::Functions.create_function(:'simp_banners::fetch') do
     unless supported_banners[name]
       raise(
         Puppet::ParseError,
-        %(Banner '#{name}' not found. Supported banners:\n  * #{supported_banners.keys.join("\n  * ")})
+        %(Banner '#{name}' not found. Supported banners:\n  * #{supported_banners.keys.join("\n  * ")}),
       )
     end
 
     if format['file_source']
-      return "puppet:///simp_banners/#{name}"
+      "puppet:///simp_banners/#{name}"
+    elsif format['cr_escape']
+      File.read(supported_banners[name]).gsub(%r{[\r\n]}, '\n')
     else
-      if format['cr_escape']
-        return File.read(supported_banners[name]).gsub(/[\r\n]/,'\n')
-      else
-        return File.read(supported_banners[name])
-      end
+      File.read(supported_banners[name])
     end
   end
 end
