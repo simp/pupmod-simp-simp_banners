@@ -12,12 +12,8 @@ describe 'simp_banners::fetch' do
 
   context 'format options' do
     context 'cr_escape' do
-      it {
-        result = subject.execute('simp', { 'cr_escape' => true })
-
-        expect(result.lines.count).to eq(1)
-        expect(result).to match(%r{ATTENTION.+\\n})
-      }
+      it { is_expected.to run.with_params('simp', { 'cr_escape' => true }).and_return(%r{ATTENTION.+\\n}) }
+      it { is_expected.to run.with_params('simp', { 'cr_escape' => true }).and_return(%r{(?!\n)}) }
     end
 
     context 'file_source' do
