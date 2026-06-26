@@ -22,7 +22,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v7
-      - name: "Install Ruby 3.2"
+      - name: "Install Ruby 3.4"
         uses: ruby/setup-ruby@v1  # ruby/setup-ruby@ec106b438a1ff6ff109590de34ddc62c540232e0
         with:
           ruby-version: 3.4.9
@@ -34,7 +34,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v7
-      - name: "Install Ruby 3.2"
+      - name: "Install Ruby 3.4"
         uses: ruby/setup-ruby@v1
         with:
           ruby-version: 3.4.9
