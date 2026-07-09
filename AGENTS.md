@@ -27,8 +27,8 @@ The module's only logic lives in the function.
     **path of the file relative to `files/`**, so nested banners include their
     subdirectory, e.g. `'us/department_of_commerce'` (`fetch.rb`,
     `28`).
-  - `$format` (`Optional[Struct[{ "cr_escape" => Optional[Boolean],
-    "file_source" => Optional[Boolean] }]]`, defaults to `{}`) — formatting
+  - `$format` (optional `Struct[{ "cr_escape" => Optional[Boolean],
+    "file_source" => Optional[Boolean] }]`, an optional param defaulting to `{}`; `undef` is not accepted) — formatting
     options (`fetch.rb`, `36`).
 
   Control flow (`fetch.rb`):
@@ -43,7 +43,7 @@ The module's only logic lives in the function.
     to its absolute path (`fetch.rb`). The `Find.find` walk yields
     directories as well as files, and the map is keyed by `path.slice!(0..len)`.
   - **Errors** (both `Puppet::ParseError`):
-    - If `files/` yields nothing, `"No banners found under '<path>'"`
+    - `"No banners found under '<path>'"` — guards `supported_banners.empty?`, but `Find.find` always yields at least the `files/` dir itself, so this branch is effectively unreachable unless `Find.find` raises first
       (`fetch.rb`).
     - If `$name` is not a key in `supported_banners`, it raises
       `"Banner '<name>' not found. Supported banners:\n  * ..."` listing every
@@ -79,8 +79,7 @@ The module's only logic lives in the function.
   check only validates that `$name` is a known key, not that content is
   readable.
 - **`Find.find` also records directories as keys** (e.g. `us`), because the walk
-  is not filtered to files. Fetching a directory name would try to `File.read`
-  a directory and error at read time, not at the "not found" check.
+  is not filtered to files. When `file_source` is false, fetching a directory name would try to `File.read` a directory and error at read time (not at the "not found" check); with `file_source: true` it returns a `puppet:///` URI without reading, so no error.
 - **`cr_escape` produces a literal backslash-n, not a real newline** — it is for
   contexts that want the escape sequence as text (`fetch.rb`).
 - There are **no `simp_options` lookups, no `assert_private`, and no
