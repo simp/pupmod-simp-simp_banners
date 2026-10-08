@@ -59,4 +59,3 @@ Options:
 * **'file_source'** `Boolean`: Return a String suitable for a File `source` option
 
 * Takes precedence over all other formatting options if set
-
